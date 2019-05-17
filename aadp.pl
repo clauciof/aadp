@@ -16,7 +16,7 @@ qtde([_|T],S):-qtde(T,G),S is 1+G.
 
 %!  %%%%%%%%%%%%%
 %solucao por busca em profundidade (bp)
-solucao_bp([Inicial],Solucao) :- bp([],[Inicial],Solucao).
+solucao_bp(Inicial,Solucao) :- bp([],Inicial,Solucao).
 
 %Se o primeiro estado da lista é meta, retorna a meta
 bp(Caminho,Estado,[Estado|Caminho]) :- meta(Estado).
